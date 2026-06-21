@@ -39,8 +39,8 @@ def run_groundtruth_slam():
     gt_poses = load_ground_truth("dataset_room/groundtruth.txt")
 
     # 3. Grab the raw files
-    rgb_files = sorted(glob.glob("dataset_room/rgb/*.png"))[:300]
-    depth_files = sorted(glob.glob("dataset_room/depth/*.png"))[:300]
+    rgb_files = sorted(glob.glob("dataset_room/rgb/*.png"))
+    depth_files = sorted(glob.glob("dataset_room/depth/*.png"))
 
     def extract_time(filepath):
         name_no_ext = os.path.splitext(os.path.basename(filepath))[0]
